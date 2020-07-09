@@ -1,0 +1,294 @@
+Ques 1.
+
+#!/bin/bash
+# Purpose is to demonstrate a sigle digit using RANDOM Function.
+
+num1=$((RANDOM % 9 + 1))
+echo "$num1"
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Ques 2.
+
+#!/bin/bash
+# Purpose is to get a Dice Number b/w RANDOM Function.
+
+num1=$((RANDOM % 6 + 1))
+echo "$num1"
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Ques 3.
+
+#!/bin/bash
+# Purpose is to get sum of a dice number using RANDOM Function.
+
+num1=$((RANDOM % 6 + 1))
+num2=$((RANDOM % 6 + 1))
+sum=$num1 + $num2
+echo "The Sum Of two numbers= $sum"
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Ques 4.
+
+#!/bin/bash -x
+
+read -p "enter $ two digit number :"RN1 RN2 RN3 RN4 RN5
+sum=$ (( $RN1+$RN2+$RN3+$RN4+$RN5 ))
+avg=$ (( $sum/5 ))
+ echo $sum 
+ echo $avg
+
+-----------------------------------------------------------------------------------------------------------------------------
+Ques 5.
+
+#!/bin/bash -x
+echo "feet-inch, feet-metre, inch-feet, meter-feet"
+read -p "enter number and any one of the conversions listed above :" num cov
+case $ $cov in
+feet-inch) echo "$(( $num*12 )) in ";;
+feet-metre ) echo "$(( $num/3 )) ,";;
+inch-feet) echo "$(( $num/12 ))ft";;
+metre-feet) echo "$(( $num*3 )) ft";;
+") echo "conversion not found";;
+esac
+
+
+#!/bin/bash -x
+
+in-inches
+ft-feet
+#r the sides of the rectangular plot in feet
+length=40
+breadth=60
+x=40*0.30s #convert to metres
+y=60*0.30s #convert to metres
+areainmetre=$x*$y
+	echo $areainmetre
+#Area of plots in acre
+areainacre=$99 areainmetre*0.000247 )))
+	echo $areainmetre
+#Area of 25 plots in acre
+areaof25=$((( $areainacre*25 ))
+	area $ areaof25
+
+done
+--------------------------------------------------------------------------------------------------------------------------------------
+Ques 6.
+
+#!/bin/bash
+
+echo "Enter num1"
+read num1
+echo "Enter num2"
+read num2
+echo "Enter num3"
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3]
+then
+	echo $num1
+if [ $num2 -gt $num1 ] && [ $num2 -gt $num3]
+then 
+	echo $num?
+else
+echo $num3
+fi
+--------------------------------------------------------------------------------------------------------------------------------
+
+Ques 7.
+
+#!/bin/bash
+
+echo date 
+day=$(date '+%d')
+month=$(date '+%m')
+
+if [$month -ge 03 && $day -ge 20]
+then
+	if [ $month -le 06 -o $day -le 20]
+	then
+		echo"True"
+	else
+		echo "False"
+fi
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Ques 8.
+
+
+#!/bin/bash
+
+# Shell program to read any year and find whether leap year or not
+
+# store year
+yy=0
+
+isleap="false"
+ 
+echo -n "Enter year (yyyy) : "
+read yy
+ 
+# find out if it is a leap year or not
+ 
+if [ $((yy % 4)) -ne 0 ] ; then
+   : #  not a leap year : means do nothing and use old value of isleap
+elif [ $((yy % 400)) -eq 0 ] ; then
+   # yes, it's a leap year
+   isleap="true"
+elif [ $((yy % 100)) -eq 0 ] ; then
+   : # not a leap year do nothing and use old value of isleap
+else
+   # it is a leap year
+   isleap="true"
+fi
+if [ "$isleap" == "true" ];
+then
+   echo "$yy is leap year"
+else
+   echo "$yy is NOT leap year"
+fi
+-------------------------------------------------------------------------------------------------------------------------------------
+Ques 9.
+
+
+#!/bin/sh
+ 
+printf "Choose (h)eads or (t)ails: "
+read user_choice
+ 
+# Make sure user chooses between heads or tails
+if [ $user_choice != h ] && [ $user_choice != t ]; then
+  echo "Invalid choice. Defaulting to (h)eads."
+  user_choice=h
+fi
+ 
+# Value of 1 is heads, 2 is tails
+computer_choice=$((RANDOM % 2 + 1))
+ 
+if [ $computer_choice -eq 1 ]; then
+  echo "Computer chose heads."
+else
+  echo "Computer chose tails."
+
+fi
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques 10.
+
+#!/bin/sh
+
+echo -n "Enter number : "
+read n
+ 
+len=$(echo $n | wc -c)
+len=$(( $len - 1 ))
+ 
+echo "Your number $n in words : "
+for (( i=1; i<=$len; i++ ))
+do
+   # get one digit at a time
+    digit=$(echo $n | cut -c $i)
+   # use case control structure to find digit equivalent in words 
+    case $digit in
+        0) echo -n "zero " ;;
+        1) echo -n "one " ;;
+        2) echo -n "two " ;;
+        3) echo -n "three " ;;
+        4) echo -n "four " ;;
+        5) echo -n "five " ;;
+        6) echo -n "six " ;;
+        7) echo -n "seven " ;;
+        8) echo -n "eight " ;;
+        9) echo -n "nine " ;;
+    esac	
+done
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques11
+
+nd=0
+read -p "Enter single digit number: "x;
+y=$x
+while [$x -gt 0 }
+do
+	sd=$(( $x%10 ))
+	x=$(( $x /10 ))
+	nd=$(( $nd +1 ))
+done
+if[$nd -eq 1 -a $y -le 6 -a $y -gt 0]
+then
+	case "$y" in
+	1) echo "Sunday";;
+	2) echo "Monday";;
+	3) echo "Tuesday";;
+	4) echo "Wednesday";;
+	5) echo "Thursday";;
+	6) echo "Friday";;
+	7) echo "Saturday";;
+	esac
+else
+	echo "Enter Single digit number between 1 to 7 only"
+
+f1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques 12.
+
+echo -n "Enter number : "
+read n
+ 
+len=$(echo $n | wc -c)
+len=$(( $len - 1 ))
+ 
+echo "Your number $n in words : "
+for (( i=1; i<=$len; i*10 ))
+do
+    digit=$(echo $n | cut -c $i) 
+    case $digit in
+        0) echo -n "one " ;;
+        1) echo -n "ten ";;
+        2) echo -n "hundred" ;;
+        3) echo -n "thousand" ;;
+ esac	
+done
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 13.
+
+#!/bin/bash
+echo "Enterno of value of 3 digit";
+read i;
+#operation random number of 3 digit.
+for (( c=1; c<=$i; c++))
+do 
+	in[$c]=`shuf -i 100-999 -nl`
+done
+max=$[b[1]];
+for (( c=1; c<=$i; c++))
+do
+	if {$max -lt $9b[$c]}
+then
+	max=${b[$c]}
+	fi
+done
+min=${b[i]};
+for ((c=1; c<=$i;c++))
+do
+	if{ $min -gt ${b[$c]}
+	then
+		min=${b[$c}}
+	fi
+done
+
+for ((c=1; c<=$i; c++))
+do
+	cho "$c random number : ${b[$c]}"
+done
+echo "max number is : $max"
+echo "min number is : $min"
